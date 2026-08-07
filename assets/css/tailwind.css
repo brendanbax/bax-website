@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bordered {
+    @apply border-neutral-200 dark:border-neutral-800;
+}
