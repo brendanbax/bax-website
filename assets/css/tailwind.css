@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-.bordered {
-    @apply border-neutral-200 dark:border-neutral-800;
+html {
+    @apply font-rokkitt;
+}
+html.dark {
+    @apply bg-neutral-950;
+}
+
+:root {
+    /* pink-500, same in both modes for now — override .dark independently if that changes */
+    --color-brand: 236 72 153;
+}
+
+.dark {
+    --color-brand: 236 72 153;
+}
+
+@layer components {
+    .bordered {
+        @apply border-neutral-200 dark:border-neutral-800;
+    }
+    .padded {
+        @apply px-6 sm:px-14;
+    }
 }
