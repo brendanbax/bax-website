@@ -5,7 +5,12 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       fontFamily: {
-        rokkitt: ['Rokkitt', 'serif']
+        rokkitt: ['Rokkitt', 'serif'],
+        chivo: ['Chivo', 'sans-serif'],
+        bebas: ['Bebas Neue', 'sans-serif']
+      },
+      colors: {
+        brand: 'rgb(var(--color-brand) / <alpha-value>)'
       }
     }
   }
