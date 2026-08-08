@@ -2,9 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxt/content'],
   fonts: {
-    families: [{ name: 'Rokkitt', provider: 'google', global: true, weights: ['100 900'] }]
+    families: [
+      { name: 'Rokkitt', provider: 'google', global: true, weights: ['100 900'] },
+      { name: 'Chivo', provider: 'google', global: true, weights: ['100 900'] },
+      { name: 'Bebas Neue', provider: 'google', global: true, weights: ['400'] },
+    ]
   },
   app: {
     head: {
