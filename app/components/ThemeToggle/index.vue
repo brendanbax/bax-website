@@ -17,10 +17,10 @@ onMounted(() => {
 </script>
 
 <template>
-    <button @click="toggleTheme" class="overflow-hidden w-10 h-6" title="Change theme">
+    <button @click="toggleTheme" class="overflow-hidden w-10 h-5" title="Change theme">
         <div class="rounded-full size-10 relative origin-center transition-transform transform will-change-transform" :class="{'rotate-180': isDarkMode}">
-            <IconSun :class="{ 'hidden': isDarkMode }" class="text-neutral-700 size-4 absolute left-1/2 transform -translate-x-1/2 top-1.5" />
-            <IconMoon :class="{ 'hidden': !isDarkMode }" class="text-neutral-300 size-4 absolute left-1/2 transform -translate-x-1/2 bottom-1.5 rotate-180 origin-center" />
+            <IconSun :class="{ 'hidden': isDarkMode }" class="text-neutral-700 size-3 absolute left-1/2 transform -translate-x-1/2 top-1.5" />
+            <IconMoon :class="{ 'hidden': !isDarkMode }" class="text-neutral-300 size-3 absolute left-1/2 transform -translate-x-1/2 bottom-1.5 rotate-180 origin-center" />
         </div>
     </button>
 </template>
