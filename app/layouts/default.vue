@@ -2,7 +2,9 @@
     <div class="flex flex-col min-h-dvh">
         <NavBar />
         
-        <slot />
+        <div class="pt-12">
+            <slot />
+        </div>
     
         <footer>
             <!-- TODO: copyright footer -->

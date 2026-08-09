@@ -5,6 +5,16 @@ const { data: post } = await useAsyncData(route.path, () =>
 )
 
 const titleWords = computed(() => post.value?.title?.split(' ') ?? [])
+
+function titleWordStyle(index: number) {
+    const total = titleWords.value.length
+    const positionY = total > 1 ? `${(index / (total - 1)) * 100}%` : '0%'
+    return {
+        animationDelay: `${index * 80}ms`,
+        backgroundSize: `100% ${total * 100}%`,
+        backgroundPositionY: positionY
+    }
+}
 </script>
 
 <template>
@@ -21,12 +31,12 @@ const titleWords = computed(() => post.value?.title?.split(' ') ?? [])
                     <span class="text-neutral-600 dark:text-neutral-400">-</span>
                     <p>{{ post.date }}</p>
                 </div>
-                <h1 class="flex flex-col text-6xl sm:text-8xl lg:text-[10rem] leading-none font-[875] font-bebas text-brand">
+                <h1 class="flex flex-col text-6xl sm:text-8xl lg:text-[8rem] leading-none font-[875] font-bebas text-brand">
                     <span
                         v-for="(word, index) in titleWords"
                         :key="`${word}-${index}`"
-                        class="left-in inline-block"
-                        :style="{ animationDelay: `${index * 80}ms` }"
+                        class="left-in inline-block bg-gradient-to-b from-pink-500 to-pink-800 dark:from-pink-400 dark:to-pink-700 bg-clip-text bg-no-repeat text-transparent"
+                        :style="titleWordStyle(index)"
                     >{{ word }}</span>
                 </h1>
             </div>

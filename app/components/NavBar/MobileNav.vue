@@ -9,8 +9,9 @@ interface MobileNavProps {
 const { links } = defineProps<MobileNavProps>()
     
 const showMenu = ref(false)
+const windowScrollPosition = ref(0)
 
-const matchMediaQuery = window.matchMedia('(min-width: 640px)')
+let matchMediaQuery: MediaQueryList | undefined
 
 function handleChange(e: MediaQueryListEvent) {
     if (e.matches) {
@@ -18,8 +19,36 @@ function handleChange(e: MediaQueryListEvent) {
     }
 }
 
-onMounted(() => matchMediaQuery.addEventListener('change', handleChange))
-onBeforeUnmount(() => matchMediaQuery.removeEventListener('change', handleChange))
+function lockScroll() {
+    windowScrollPosition.value = window.scrollY
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${windowScrollPosition.value}px`
+    document.body.style.width = '100%'
+    document.body.style.overflow = 'hidden'
+}
+
+function unlockScroll() {
+    document.body.style.position = ''
+    document.body.style.top = ''
+    document.body.style.width = ''
+    window.scrollTo(0, windowScrollPosition.value)
+    document.body.style.overflow = ''
+}
+
+onMounted(() => {
+    matchMediaQuery = window.matchMedia('(min-width: 640px)')
+    matchMediaQuery.addEventListener('change', handleChange)
+})
+
+onBeforeUnmount(() => matchMediaQuery?.removeEventListener('change', handleChange))
+
+watch(showMenu, (newVal) => {
+    if (newVal) {
+        lockScroll()
+    } else {
+        unlockScroll()
+    }
+})
 
 </script>
 
