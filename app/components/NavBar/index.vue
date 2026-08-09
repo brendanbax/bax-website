@@ -1,6 +1,5 @@
 <script setup lang="ts">
-const isLocalDev = import.meta.dev
-const coreNav = [
+const navLinks = [
     {
         name: 'Home',
         route: '/',
@@ -14,11 +13,6 @@ const coreNav = [
         route: '/insights',
     },
 ]
-const navLinks = isLocalDev ?
-    [...coreNav, {
-        name: 'Design',
-        route: '/design',
-    }] : coreNav
 
 </script>
 

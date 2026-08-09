@@ -3,6 +3,8 @@ const route = useRoute()
 const { data: post } = await useAsyncData(route.path, () =>
   queryCollection('insights').path(route.path).first()
 )
+
+const titleWords = computed(() => post.value?.title?.split(' ') ?? [])
 </script>
 
 <template>
@@ -19,23 +21,27 @@ const { data: post } = await useAsyncData(route.path, () =>
                     <span class="text-neutral-600 dark:text-neutral-400">-</span>
                     <p>{{ post.date }}</p>
                 </div>
-                <h1 class="hero text-5xl sm:text-8xl lg:text-[10rem] leading-none font-[875] font-bebas text-brand">{{ post.title }}</h1>
+                <h1 class="flex flex-col text-6xl sm:text-8xl lg:text-[10rem] leading-none font-[875] font-bebas text-brand">
+                    <span
+                        v-for="(word, index) in titleWords"
+                        :key="`${word}-${index}`"
+                        class="left-in inline-block"
+                        :style="{ animationDelay: `${index * 80}ms` }"
+                    >{{ word }}</span>
+                </h1>
             </div>
-            <div class="lg:absolute right-14 bottom-16 lg:w-1/3 rounded-lg bordered border bg-neutral-50 dark:bg-neutral-950 p-6">
+            <div class="right-in md:absolute right-14 bottom-16 md:w-1/3 rounded-lg bordered border bg-neutral-50 dark:bg-neutral-950 p-4 sm:p-6">
                 <p class="text-lg sm:text-xl lg:text-2xl">{{ post.description }}</p>
             </div>
-            <IconArrowDown class="hidden lg:block size-8 text-brand absolute bottom-5 right-14" />
+            <IconArrowDown class="bounce-in hidden md:block size-8 text-brand absolute bottom-5 right-14" />
         </header>
-        <div class="max-w-prose mx-auto py-16">
+        <div class="max-w-prose mx-auto padded py-16">
             <ContentRenderer :value="post" />
         </div>
     </article>
 </template>
 
 <style scoped>
-.hero {
-    word-spacing: 100vw;
-}
 .pinstripes {
     --angle: 315deg;
   background: repeating-linear-gradient(
