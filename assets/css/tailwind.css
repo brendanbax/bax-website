@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 html {
-    @apply font-rokkitt;
+    @apply font-rokkitt bg-neutral-50 text-neutral-950;
 }
 html.dark {
-    @apply bg-neutral-950;
+    @apply bg-neutral-950 text-white;
 }
 
 :root {
@@ -16,6 +16,36 @@ html.dark {
 
 .dark {
     --color-brand: 236 72 153;
+}
+
+/* Outside @layer so Tailwind's content-based purge can't remove these —
+   Vue's <Transition name="..."> constructs these class names at runtime,
+   so their exact strings never appear literally in the .vue templates. */
+.overlay-fade-enter-active,
+.overlay-fade-leave-active {
+    transition: opacity 0.15s ease-out;
+}
+.overlay-fade-enter-from,
+.overlay-fade-leave-to {
+    opacity: 0;
+}
+
+.menu-slide-enter-active,
+.menu-slide-leave-active {
+    transition: transform 0.25s ease-out;
+}
+.menu-slide-enter-from,
+.menu-slide-leave-to {
+    transform: translateX(100%);
+}
+
+.page-enter-active,
+.page-leave-active {
+    transition: opacity 0.2s ease;
+}
+.page-enter-from,
+.page-leave-to {
+    opacity: 0;
 }
 
 @layer components {

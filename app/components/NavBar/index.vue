@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import MobileNav from './MobileNav.vue'
+
 const navLinks = [
     {
         name: 'Home',
@@ -24,19 +26,22 @@ const navLinks = [
                  <BaxLogo class="size-6" />
              </div>
              <!-- TODO: If on home, don't show until scrolled a bit, then animate in from the left -->
-             <div class="flex items-center ml-5">
+             <div class="hidden sm:flex items-center ml-5">
                  <span class="text-xl leading-none font-medium uppercase tracking-wide">Brendan Bax</span>
              </div>
-            <ul class="ml-auto flex items-stretch bordered">
+            <ul class="hidden sm:flex ml-auto items-stretch bordered">
                 <li v-for="link in navLinks" :key="link.route" class="flex items-stretch justify-stretch border-l bordered">
                     <NuxtLink :to="link.route" class="px-8 flex items-center justify-center">
                         <span class="text-lg font-light text-center">{{ link.name }}</span>
                     </NuxtLink>
                 </li>
-                <li class="py-4 px-2 bordered border-l">
-                    <ThemeToggle class="ml-auto" />
+                <li class="bordered border-l">
+                    <ThemeToggle />
                 </li>
             </ul>
+            <div class="block sm:hidden bordered border-l">
+                <MobileNav :links="navLinks" />
+            </div>
         </nav>
     </header>
 </template>
