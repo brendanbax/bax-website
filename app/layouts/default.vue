@@ -6,8 +6,6 @@
             <slot />
         </div>
     
-        <footer>
-            <!-- TODO: copyright footer -->
-        </footer>
+        <WebFooter />
     </div>
 </template>
