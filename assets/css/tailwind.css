@@ -3,24 +3,94 @@
 @tailwind utilities;
 
 html {
-    @apply font-rokkitt bg-neutral-50 text-neutral-950;
+    @apply font-rokkitt bg-base-50 text-base-950;
 }
 html.dark {
-    @apply bg-neutral-950 text-white;
+    @apply bg-base-950 text-white;
 }
 
-:root {
-    /* pink-500, same in both modes for now — override .dark independently if that changes */
-    --color-brand: 236 72 153;
+:root,
+[data-brand="pink"] {
+    --color-brand-50: 255 241 242;
+    --color-brand-100: 255 228 230;
+    --color-brand-200: 254 205 211;
+    --color-brand-300: 253 164 175;
+    --color-brand-400: 251 113 133;
+    --color-brand-500: 244 63 94;
+    --color-brand-600: 225 29 72;
+    --color-brand-700: 190 18 60;
+    --color-brand-800: 159 18 57;
+    --color-brand-900: 136 19 55;
+    --color-brand-950: 76 5 25;
+
+    /* neutral */
+    --color-base-50: 250 250 250;
+    --color-base-100: 245 245 245;
+    --color-base-200: 229 229 229;
+    --color-base-300: 212 212 212;
+    --color-base-400: 163 163 163;
+    --color-base-500: 115 115 115;
+    --color-base-600: 82 82 82;
+    --color-base-700: 64 64 64;
+    --color-base-800: 38 38 38;
+    --color-base-900: 23 23 23;
+    --color-base-950: 10 10 10;
 }
 
-.dark {
-    --color-brand: 236 72 153;
+[data-brand="lime"] {
+    --color-brand-50: 247 254 231;
+    --color-brand-100: 236 252 203;
+    --color-brand-200: 217 249 157;
+    --color-brand-300: 190 242 100;
+    --color-brand-400: 163 230 53;
+    --color-brand-500: 132 204 22;
+    --color-brand-600: 101 163 13;
+    --color-brand-700: 77 124 15;
+    --color-brand-800: 63 98 18;
+    --color-brand-900: 54 83 20;
+    --color-brand-950: 26 46 5;
+
+    /* stone */
+    --color-base-50: 250 250 249;
+    --color-base-100: 245 245 244;
+    --color-base-200: 231 229 228;
+    --color-base-300: 214 211 209;
+    --color-base-400: 168 162 158;
+    --color-base-500: 120 113 108;
+    --color-base-600: 87 83 78;
+    --color-base-700: 68 64 60;
+    --color-base-800: 41 37 36;
+    --color-base-900: 28 25 23;
+    --color-base-950: 12 10 9;
 }
 
-/* Outside @layer so Tailwind's content-based purge can't remove these —
-   Vue's <Transition name="..."> constructs these class names at runtime,
-   so their exact strings never appear literally in the .vue templates. */
+[data-brand="midnight"] {
+    --color-brand-50: 238 242 255;
+    --color-brand-100: 224 231 255;
+    --color-brand-200: 199 210 254;
+    --color-brand-300: 165 180 252;
+    --color-brand-400: 129 140 248;
+    --color-brand-500: 99 102 241;
+    --color-brand-600: 79 70 229;
+    --color-brand-700: 67 56 202;
+    --color-brand-800: 55 48 163;
+    --color-brand-900: 49 46 129;
+    --color-brand-950: 30 27 75;
+
+    /* slate */
+    --color-base-50: 248 250 252;
+    --color-base-100: 241 245 249;
+    --color-base-200: 226 232 240;
+    --color-base-300: 203 213 225;
+    --color-base-400: 148 163 184;
+    --color-base-500: 100 116 139;
+    --color-base-600: 71 85 105;
+    --color-base-700: 51 65 85;
+    --color-base-800: 30 41 59;
+    --color-base-900: 15 23 42;
+    --color-base-950: 2 6 23;
+}
+
 .overlay-fade-enter-active,
 .overlay-fade-leave-active {
     transition: opacity 0.15s ease-out;
@@ -50,7 +120,7 @@ html.dark {
 
 @layer components {
     .bordered {
-        @apply border-neutral-200 dark:border-neutral-800;
+        @apply border-base-200 dark:border-base-800;
     }
     .padded {
         @apply px-6 sm:px-14;

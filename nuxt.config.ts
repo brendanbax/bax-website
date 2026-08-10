@@ -17,6 +17,10 @@ export default defineNuxtConfig({
         {
           innerHTML: `(function(){try{var t=localStorage.theme;if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})()`,
           type: 'text/javascript'
+        },
+        {
+          innerHTML: `(function(){try{var b=localStorage.brand;if(b==='lime'||b==='midnight'){document.documentElement.dataset.brand=b}}catch(e){}})()`,
+          type: 'text/javascript'
         }
       ]
     }

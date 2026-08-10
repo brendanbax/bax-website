@@ -19,7 +19,7 @@ const navLinks = [
 </script>
 
 <template>
-    <header class="backdrop-blur-lg fixed top-0 inset-x-0 z-50 bg-neutral-50/80 dark:bg-neutral-950/80">
+    <header class="backdrop-blur-lg fixed top-0 inset-x-0 z-50 bg-base-50/80 dark:bg-base-950/80">
         <nav class="flex items-stretch justify-between bordered border-b">
             <!-- TODO: If on home, don't show until scrolled a bit, then animate in from the top -->
              <div class="border-r bordered p-4">
