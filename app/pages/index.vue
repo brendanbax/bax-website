@@ -21,10 +21,10 @@ definePageMeta({
                     </textPath>
                 </text>
 
-                <g transform="translate(185,80) scale(0.02083) rotate(-20) translate(-480,480)">
+                <g transform="translate(185,80) scale(0.02) rotate(-10) scale(-1,1) translate(-480,480)">
                     <path d="m320-80 40-280H160l360-520h80l-40 320h240L400-80h-80Z" />
                 </g>
-                <g transform="translate(15,80) scale(0.02083) rotate(15) translate(-480,480)">
+                <g transform="translate(15,80) scale(0.02) rotate(10) translate(-480,480)">
                     <path d="m320-80 40-280H160l360-520h80l-40 320h240L400-80h-80Z" />
                 </g>
             </svg>
