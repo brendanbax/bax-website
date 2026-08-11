@@ -14,7 +14,7 @@ const { data: posts } = await useAsyncData('insights-list', () =>
                     <span>{{ post.date }}</span>
                 </div>
                 <p>{{ post.description }}</p>
-                <NuxtLink :to="post.path">Learn more</NuxtLink>
+                <ThemeLink :to="post.path">Read</ThemeLink>
             </li>
         </ul>
     </div>
