@@ -1,3 +1,3 @@
 <template>
-  <p class="font-chivo text-base font-[100] mb-4"><slot /></p>
+  <p class="font-chivo leading-6 text-base-700 dark:text-base-300 font-[100] mb-4"><slot /></p>
 </template>
