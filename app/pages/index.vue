@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { IconAloha, IconNetwork, IconSkull } from '#components'
+
 definePageMeta({
     layout: 'default'
 })
@@ -6,6 +8,31 @@ definePageMeta({
 const now = new Date().getFullYear()
 const careerStart = 2013 // November @ Controller Chaos
 const careerSpan = computed(() => now - careerStart)
+
+const homeCards = [
+    {
+        id: 'de-risking-ideas',
+        title: 'De-Risking Ideas',
+        overline: 'UX Discovery',
+        description: 'Poorly planned features cost engineering time. I conduct early user research, journey mapping, and rapid prototype testing to validate assumptions and refine product direction before writing production code.',
+        icon: IconSkull,
+    },
+    {
+        id: 'zero-handoff-friction',
+        title: 'Zero Handoff Friction',
+        overline: 'Design to Code',
+        description: 'I design with code in mind, creating user experiences grounded in atomic engineering principles. Wireframes and high-fidelity mock-ups become living applications with reduced communication overhead and accelerated launches.',
+        icon: IconAloha,
+    },
+    {
+        id: 'atomic-execution',
+        title: 'Atomic Execution',
+        overline: 'System Architecture',
+        description: 'Excellent experiences require excellent code. I build composable, tested frontends and services with the latest web technology for flexible, maintainable products that delight users.',
+        icon: IconNetwork,
+    }
+]
+
 </script>
 
 <template>
@@ -18,7 +45,7 @@ const careerSpan = computed(() => now - careerStart)
                         class="hidden lg:block"
                     />
                     <h1 class="block lg:hidden gradient-hero-item text-center text-6xl md:text-7xl leading-none font-[875] font-bebas top-in">Shipping products</h1>
-                    <h2 class="uppercase font-bold tracking-wide text-xl sm:text-3xl lg:text-5xl flex gap-x-6 items-center justify-center lg:justify-start top-in lg:left-in">
+                    <h2 class="uppercase font-bold tracking-wide text-xl sm:text-3xl lg:text-5xl flex gap-x-3 md:gap-x-6 items-center justify-center lg:justify-start top-in lg:left-in">
                         <span>concept</span>
                         <span>to</span>
                         <span>code</span>
@@ -62,59 +89,17 @@ const careerSpan = computed(() => now - careerStart)
             </div>
         </PageHero>
 
-        <!--
-            Let's add a ribbon here with technology logos for:
-            HTML, CSS, JavaScript, TypeScript, React, Vue, Nuxt, Node, and Python(?)
-        -->
-
         <section class="py-12">
             <ProseH2 class="text-center">The Product Engineer Difference</ProseH2>
-
-            <div class="flex flex-col gap-24 padded mt-8 max-w-screen-xl mx-auto">
-                <ThemeCard class="flex">
-                    <!-- TODO: Let's use something more interesting here - likely need an icon, maybe a patterned fill? -->
-                    <div class="bg-brand w-2/3 rounded -m-6 mr-6 flex items-center justify-center">
-                        <IconSkull class="size-32"/>
-                    </div>
-                    <article>
-                        <ProseOverline>UX Discovery</ProseOverline>
-                        <ProseH3>De-Risking Ideas</ProseH3>
-                        <ProseP>
-                            Poorly planned features cost engineering time. I conduct early user research, journey mapping, and rapid
-                            prototype testing to validate assumptions and refine product direction before writing production
-                            code.
-                        </ProseP>
-                    </article>
-                </ThemeCard>
-
-                <ThemeCard class="flex">
-                    <article>
-                        <ProseOverline>Design to Code</ProseOverline>
-                        <ProseH3>Zero Handoff Friction</ProseH3>
-                        <ProseP>
-                            I design with code in mind, creating user experiences grounded in atomic engineering principles. Wireframes and high-fidelity
-                            mock-ups become living applications with reduced communication overhead and accelerated launches.
-                        </ProseP>
-                    </article>
-                    <div class="bg-brand w-2/3 rounded -m-6 ml-6 flex items-center justify-center">
-                        <IconAloha class="size-32" />
-                    </div>
-                </ThemeCard>
-                
-                <ThemeCard class="flex">
-                    <div class="bg-brand w-2/3 rounded -m-6 mr-6 flex items-center justify-center">
-                        <IconNetwork class="size-32" />
-                    </div>
-                    <article>
-                        <ProseOverline>System Architecture</ProseOverline>
-                        <ProseH3>Atomic Execution</ProseH3>
-                        <ProseP>
-                            Excellent experiences require excellent code. I build composable, tested frontends and services with the latest web technology
-                            for flexible, maintainable products that delight users.
-                        </ProseP>
-                    </article>
-                </ThemeCard>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 sm:gap-12 padded mt-8 max-w-screen-xl mx-auto">
+                <HomeCard v-for="card in homeCards" :key="card.id" v-bind="card" />
             </div>
         </section>
+
+        <HomeCarousel />
+
+        <!-- Don't forget a blog post filler for the latest insights -->
+
+        <!-- Large social media connection section -->
     </div>
 </template>
