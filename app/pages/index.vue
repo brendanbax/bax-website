@@ -24,7 +24,7 @@ const careerSpan = computed(() => now - careerStart)
                         <span>code</span>
                     </h2>
                     <ProseP class="max-w-prose my-6 text-center lg:text-left">
-                        I am a Product Engineer with {{ careerSpan }}+ years of experience bridging user research, UI design, and full-stack
+                        I am a Product Engineer with {{ careerSpan }}+ years of experience blending user research, UI design, and full-stack
                         development. I validate user needs early, eliminate handoff friction, and ship scalable systems built to
                         last.
                     </ProseP>
@@ -62,57 +62,59 @@ const careerSpan = computed(() => now - careerStart)
             </div>
         </PageHero>
 
-    <section>
-        <ProseH2>The Product Engineer Difference</ProseH2>
+        <!--
+            Let's add a ribbon here with technology logos for:
+            HTML, CSS, JavaScript, TypeScript, React, Vue, Nuxt, Node, and Python(?)
+        -->
 
-        <article>
-            <ProseH3>De-Risking Product Ideas (UX Discovery)</ProseH3>
-            <ProseP>
-                Bad features cost months of engineering time. I use early user research, journey mapping, and rapid
-                usability testing to validate assumptions and refine product direction before writing production
-                code.
-            </ProseP>
-        </article>
+        <section class="py-12">
+            <ProseH2 class="text-center">The Product Engineer Difference</ProseH2>
 
-        <article>
-            <ProseH3>Zero Handoff Friction (Design to Code)</ProseH3>
-            <ProseP>
-                I move seamlessly from high-fidelity Figma components to modern front-end architectures. Designing
-                and engineering simultaneously eliminates communication overhead and speeds up launches.
-            </ProseP>
-        </article>
+            <div class="flex flex-col gap-24 padded mt-8 max-w-screen-xl mx-auto">
+                <ThemeCard class="flex">
+                    <!-- TODO: Let's use something more interesting here - likely need an icon, maybe a patterned fill? -->
+                    <div class="bg-brand w-2/3 rounded -m-6 mr-6 flex items-center justify-center">
+                        <IconSkull class="size-32"/>
+                    </div>
+                    <article>
+                        <ProseOverline>UX Discovery</ProseOverline>
+                        <ProseH3>De-Risking Ideas</ProseH3>
+                        <ProseP>
+                            Poorly planned features cost engineering time. I conduct early user research, journey mapping, and rapid
+                            prototype testing to validate assumptions and refine product direction before writing production
+                            code.
+                        </ProseP>
+                    </article>
+                </ThemeCard>
 
-        <article>
-            <ProseH3>Scalable Full-Stack Execution (Systems Architecture)</ProseH3>
-            <ProseP>
-                Great UI requires reliable backend infrastructure. I engineer composable, testable frontends paired
-                with robust APIs and database architectures built for long-term maintainability.
-            </ProseP>
-        </article>
-    </section>
-
-    <section>
-        <ProseH2>Proven Delivery Velocity</ProseH2>
-        <ProseP>
-            Execution speed and technical adaptability are critical in fast-moving product teams. Over the last
-            year, I established a streamlined product delivery engine, taking complex concepts from initial framing
-            all the way to production release.
-        </ProseP>
-
-        <dl>
-            <div>
-                <dt>10</dt>
-                <dd>Major Capabilities delivered end-to-end in 13 months.</dd>
+                <ThemeCard class="flex">
+                    <article>
+                        <ProseOverline>Design to Code</ProseOverline>
+                        <ProseH3>Zero Handoff Friction</ProseH3>
+                        <ProseP>
+                            I design with code in mind, creating user experiences grounded in atomic engineering principles. Wireframes and high-fidelity
+                            mock-ups become living applications with reduced communication overhead and accelerated launches.
+                        </ProseP>
+                    </article>
+                    <div class="bg-brand w-2/3 rounded -m-6 ml-6 flex items-center justify-center">
+                        <IconAloha class="size-32" />
+                    </div>
+                </ThemeCard>
+                
+                <ThemeCard class="flex">
+                    <div class="bg-brand w-2/3 rounded -m-6 mr-6 flex items-center justify-center">
+                        <IconNetwork class="size-32" />
+                    </div>
+                    <article>
+                        <ProseOverline>System Architecture</ProseOverline>
+                        <ProseH3>Atomic Execution</ProseH3>
+                        <ProseP>
+                            Excellent experiences require excellent code. I build composable, tested frontends and services with the latest web technology
+                            for flexible, maintainable products that delight users.
+                        </ProseP>
+                    </article>
+                </ThemeCard>
             </div>
-            <div>
-                <dt>&lt;4 Week</dt>
-                <dd>Concept-to-production lifecycle per feature.</dd>
-            </div>
-            <div>
-                <dt>12 Years</dt>
-                <dd>Navigating startup, agency, and enterprise software ecosystems.</dd>
-            </div>
-        </dl>
-    </section>
+        </section>
     </div>
 </template>
