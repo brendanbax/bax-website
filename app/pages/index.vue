@@ -21,7 +21,7 @@ const homeCards = [
         id: 'zero-handoff-friction',
         title: 'Zero Handoff Friction',
         overline: 'Design to Code',
-        description: 'I design with code in mind, creating user experiences grounded in atomic engineering principles. Wireframes and high-fidelity mock-ups become living applications with reduced communication overhead and accelerated launches.',
+        description: 'I design with code in mind, creating user experiences grounded in atomic engineering principles. Wireframes and high-fidelity mock-ups become living applications with reduced overhead and accelerated launches.',
         icon: IconAloha,
     },
     {
