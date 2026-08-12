@@ -100,6 +100,6 @@ const homeCards = [
 
         <!-- Don't forget a blog post filler for the latest insights -->
 
-        <!-- Large social media connection section -->
+        <HomeSocial />
     </div>
 </template>
