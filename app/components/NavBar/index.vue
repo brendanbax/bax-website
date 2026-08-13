@@ -7,13 +7,13 @@ const navLinks = [
         route: '/',
     },
     {
-        name: 'Career',
-        route: '/career',
+        name: 'Experience',
+        route: '/experience',
     },
-    {
-        name: 'Insights',
-        route: '/insights',
-    },
+    // {
+    //     name: 'Insights',
+    //     route: '/insights',
+    // },
 ]
 
 </script>
@@ -21,17 +21,15 @@ const navLinks = [
 <template>
     <header class="backdrop-blur-lg fixed top-0 inset-x-0 z-50 bg-base-50/80 dark:bg-base-950/80">
         <nav class="flex items-stretch justify-between bordered border-b">
-            <!-- TODO: If on home, don't show until scrolled a bit, then animate in from the top -->
              <div class="border-r bordered p-4">
                  <BaxLogo class="size-6" />
              </div>
-             <!-- TODO: If on home, don't show until scrolled a bit, then animate in from the left -->
              <div class="hidden sm:flex items-center ml-5">
                  <span class="text-xl leading-none font-medium uppercase tracking-wide">Brendan Bax</span>
              </div>
             <ul class="hidden sm:flex ml-auto items-stretch bordered">
                 <li v-for="link in navLinks" :key="link.route" class="flex items-stretch justify-stretch border-l bordered">
-                    <NuxtLink :to="link.route" class="px-8 flex items-center justify-center">
+                    <NuxtLink :to="link.route" class="px-8 flex items-center justify-center hover:bg-brand transition-colors">
                         <span class="text-lg font-light text-center">{{ link.name }}</span>
                     </NuxtLink>
                 </li>
