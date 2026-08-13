@@ -57,7 +57,7 @@ const homeCards = [
                     </ProseP>
                     <div class="flex items-center justify-center lg:justify-start gap-6">
                         <ThemeButton to="/career">Experience</ThemeButton>
-                        <ThemeLink to="/insights">Insights</ThemeLink>
+                        <!-- <ThemeLink to="/insights">Insights</ThemeLink> -->
                     </div>
                 </div>
                 <div class="flex items-center justify-center grow py-0 md:py-16 mb-24 lg:mb-0 lg:max-w-1/3">
@@ -97,6 +97,8 @@ const homeCards = [
         </section>
 
         <HomeCarousel />
+
+        <HomeRecommendations />
 
         <!-- Don't forget a blog post filler for the latest insights -->
 
