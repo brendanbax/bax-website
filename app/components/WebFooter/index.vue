@@ -33,7 +33,7 @@ function getFill(option: string) {
                 <button
                     type="button"
                     @click="setBrand(option.value)"
-                    class="transition-colors p-1 rounded-full"
+                    class="transition-all p-1 rounded-full hover:outline outline-2 outline-base-500"
                     :class="{'outline outline-2 outline-base-400 dark:outline-base-600': brand === option.value}"
                     :title="option.label"
                 >
