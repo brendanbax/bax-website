@@ -56,33 +56,14 @@ const homeCards = [
                         last.
                     </ProseP>
                     <div class="flex items-center justify-center lg:justify-start gap-6">
-                        <ThemeButton to="/career">Experience</ThemeButton>
+                        <ThemeButton to="/experience">Experience</ThemeButton>
                         <!-- <ThemeLink to="/insights">Insights</ThemeLink> -->
                     </div>
                 </div>
                 <div class="flex items-center justify-center grow py-0 md:py-16 mb-24 lg:mb-0 lg:max-w-1/3">
                     <div class="relative">
-                        <svg class="absolute -inset-12 md:-inset-24 fill-brand animate-[spin_18s_linear_infinite]" viewBox="0 0 200 200">
-                            <path id="circlePath" fill="none" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" />
-        
-                            <text font-size="20" letter-spacing="1" text-anchor="middle">
-                                <textPath href="#circlePath" startOffset="25%" class="uppercase font-semibold">
-                                    Brendan Bax
-                                </textPath>
-                            </text>
-                            <text font-size="20" letter-spacing="1" text-anchor="middle">
-                                <textPath href="#circlePath" startOffset="75%" class="uppercase font-semibold">
-                                    Product Engineer
-                                </textPath>
-                            </text>
-        
-                            <g transform="translate(180,83) scale(0.02) rotate(0) scale(-1,1) translate(-480,480)">
-                                <path d="m320-80 40-280H160l360-520h80l-40 320h240L400-80h-80Z" />
-                            </g>
-                            <g transform="translate(20,83) scale(0.02) rotate(0) translate(-480,480)">
-                                <path d="m320-80 40-280H160l360-520h80l-40 320h240L400-80h-80Z" />
-                            </g>
-                        </svg>
+                        <HomeLogoOrbit class="block md:hidden" :size="192" :inset="48" />
+                        <HomeLogoOrbit class="hidden md:block" :size="352" :inset="96" />
                         <BaxLogo class="size-24 md:size-40" />
                     </div>
                 </div>
