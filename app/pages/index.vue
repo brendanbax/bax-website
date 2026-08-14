@@ -71,7 +71,7 @@ const homeCards = [
         </PageHero>
 
         <section class="py-12">
-            <ProseH2 class="text-center">The Product Engineer Difference</ProseH2>
+            <ProseH2 class="text-center">When Ship Hits The Fan</ProseH2>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 sm:gap-12 padded mt-8 max-w-screen-xl mx-auto">
                 <HomeCard v-for="card in homeCards" :key="card.id" v-bind="card" />
             </div>

@@ -58,9 +58,9 @@ const recommendations: Recommendation[] = [
 
 <template>
     <section class="py-12 padded max-w-screen-xl mx-auto">
-        <ProseH2 class="text-center">Words From Peers</ProseH2>
+        <ProseH2 class="text-center">Peer Reviewed</ProseH2>
         <ProseP class="max-w-prose mx-auto text-center">
-            I thrive on collaborative, cross-functional teams where people can learn from and serve each other. Here's some praise from past colleagues.
+            Software is a team sport. I serve, lead, and grow the people around me however able. Here's what a few of them have to say.
         </ProseP>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 auto-rows-fr">
             <ThemeCard

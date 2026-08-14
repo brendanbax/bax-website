@@ -53,7 +53,7 @@ const techArray = [...technologies, ...technologies, ...technologies, ...technol
 </script>
 
 <template>
-    <section class="py-12 border-t border-brand">
+    <section class="py-12 border-t border-b border-brand">
         <ProseH4 class="text-center">Proudly Building With These Technologies</ProseH4>
         <div class="overflow-hidden">
             <ul class="marquee flex w-max mt-8">
