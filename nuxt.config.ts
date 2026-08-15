@@ -23,7 +23,7 @@ export default defineNuxtConfig({
           type: 'text/javascript'
         },
         {
-          innerHTML: `(function(){try{var b=localStorage.brand;if(b==='lime'||b==='midnight'){document.documentElement.dataset.brand=b}}catch(e){}})()`,
+          innerHTML: `(function(){try{var b=localStorage.brand;if(b==='pink'||b==='midnight'){document.documentElement.dataset.brand=b}}catch(e){}})()`,
           type: 'text/javascript'
         }
       ]
