@@ -3,6 +3,10 @@ const route = useRoute()
 const { data: post } = await useAsyncData(route.path, () =>
   queryCollection('insights').path(route.path).first()
 )
+
+if (!post.value || post.value.draft) {
+  throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
+}
 </script>
 
 <template>

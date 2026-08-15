@@ -2,6 +2,9 @@
 title: Building Legendary Design Systems
 date: 2026-08-08
 description: How well-tested, atomic building blocks combine into resilient systems.
+category: thing-built
+tags: [design-systems]
+draft: false
 ---
 
 This is a sample insights post. Replace this file, or add more `.md` files

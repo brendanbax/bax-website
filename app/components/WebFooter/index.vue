@@ -5,8 +5,8 @@ const currentYear = new Date().getFullYear()
 const { brand, setBrand } = useBrand()
 
 const brandOptions: { label: string, value: Brand }[] = [
+    { label: 'Gold', value: 'gold' },
     { label: 'Energy', value: 'pink' },
-    { label: 'Monster', value: 'lime' },
     { label: 'Midnight', value: 'midnight' }
 ]
 
@@ -14,8 +14,8 @@ function getFill(option: string) {
     switch (option) {
         case 'pink':
             return 'bg-rose-500';
-        case 'lime':
-            return 'bg-lime-500';
+        case 'gold':
+            return 'bg-[rgb(209,144,46)]';
         default:
             return 'bg-indigo-500';
     }

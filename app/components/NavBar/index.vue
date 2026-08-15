@@ -21,9 +21,9 @@ const navLinks = [
 <template>
     <header class="backdrop-blur-lg fixed top-0 inset-x-0 z-50 bg-base-50/80 dark:bg-base-950/80">
         <nav class="flex items-stretch justify-between bordered border-b">
-             <div class="border-r bordered p-4">
+             <NuxtLink to="/" class="border-r bordered p-4 flex items-center hover:bg-brand transition-colors">
                  <BaxLogo class="size-6" />
-             </div>
+             </NuxtLink>
              <div class="hidden sm:flex items-center ml-5">
                  <span class="text-xl leading-none font-medium uppercase tracking-wide">Brendan Bax</span>
              </div>

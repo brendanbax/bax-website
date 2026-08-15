@@ -10,18 +10,20 @@ html.dark {
 }
 
 :root,
-[data-brand="pink"] {
-    --color-brand-50: 255 241 242;
-    --color-brand-100: 255 228 230;
-    --color-brand-200: 254 205 211;
-    --color-brand-300: 253 164 175;
-    --color-brand-400: 251 113 133;
-    --color-brand-500: 244 63 94;
-    --color-brand-600: 225 29 72;
-    --color-brand-700: 190 18 60;
-    --color-brand-800: 159 18 57;
-    --color-brand-900: 136 19 55;
-    --color-brand-950: 76 5 25;
+[data-brand="gold"] {
+    --color-brand-50: 251 248 244;
+    --color-brand-100: 247 239 228;
+    --color-brand-200: 239 221 195;
+    --color-brand-300: 229 197 148;
+    --color-brand-400: 217 170 99;
+    --color-brand-500: 209 144 46;
+    --color-brand-600: 178 121 36;
+    --color-brand-700: 148 101 30;
+    --color-brand-800: 117 81 26;
+    --color-brand-900: 91 63 21;
+    --color-brand-950: 56 40 15;
+
+    --gradient-hero: linear-gradient(to bottom, rgb(var(--color-brand-500)), rgb(var(--color-brand-800)));
 
     /* neutral */
     --color-base-50: 250 250 250;
@@ -37,18 +39,20 @@ html.dark {
     --color-base-950: 10 10 10;
 }
 
-[data-brand="lime"] {
-    --color-brand-50: 247 254 231;
-    --color-brand-100: 236 252 203;
-    --color-brand-200: 217 249 157;
-    --color-brand-300: 190 242 100;
-    --color-brand-400: 163 230 53;
-    --color-brand-500: 132 204 22;
-    --color-brand-600: 101 163 13;
-    --color-brand-700: 77 124 15;
-    --color-brand-800: 63 98 18;
-    --color-brand-900: 54 83 20;
-    --color-brand-950: 26 46 5;
+[data-brand="pink"] {
+    --color-brand-50: 255 241 242;
+    --color-brand-100: 255 228 230;
+    --color-brand-200: 254 205 211;
+    --color-brand-300: 253 164 175;
+    --color-brand-400: 251 113 133;
+    --color-brand-500: 244 63 94;
+    --color-brand-600: 225 29 72;
+    --color-brand-700: 190 18 60;
+    --color-brand-800: 159 18 57;
+    --color-brand-900: 136 19 55;
+    --color-brand-950: 76 5 25;
+
+    --gradient-hero: linear-gradient(to bottom, rgb(var(--color-brand-500)), rgb(var(--color-brand-700)) 50%, rgb(var(--color-brand-800)));
 
     /* stone */
     --color-base-50: 250 250 249;
@@ -77,6 +81,8 @@ html.dark {
     --color-brand-900: 49 46 129;
     --color-brand-950: 30 27 75;
 
+    --gradient-hero: linear-gradient(to bottom, rgb(var(--color-brand-500)), rgb(var(--color-brand-700)) 50%, rgb(var(--color-brand-800)));
+
     /* slate */
     --color-base-50: 248 250 252;
     --color-base-100: 241 245 249;
@@ -89,6 +95,19 @@ html.dark {
     --color-base-800: 30 41 59;
     --color-base-900: 15 23 42;
     --color-base-950: 2 6 23;
+}
+
+:root.dark,
+[data-brand="gold"].dark {
+    --gradient-hero: linear-gradient(to bottom, rgb(var(--color-brand-400)), rgb(var(--color-brand-700)));
+}
+
+[data-brand="pink"].dark {
+    --gradient-hero: linear-gradient(to bottom, rgb(var(--color-brand-400)), rgb(var(--color-brand-500)) 50%, rgb(var(--color-brand-700)));
+}
+
+[data-brand="midnight"].dark {
+    --gradient-hero: linear-gradient(to bottom, rgb(var(--color-brand-400)), rgb(var(--color-brand-500)) 50%, rgb(var(--color-brand-700)));
 }
 
 .overlay-fade-enter-active,
@@ -126,7 +145,11 @@ html.dark {
         @apply px-6 sm:px-14;
     }
     .gradient-hero-item {
-        @apply bg-gradient-to-b from-brand-500 to-brand-800 dark:from-brand-400 dark:to-brand-700 bg-clip-text bg-no-repeat text-transparent;
+        background-image: var(--gradient-hero);
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-repeat: no-repeat;
+        color: transparent;
     }
 
     .left-in {

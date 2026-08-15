@@ -8,7 +8,10 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         date: z.string(),
-        description: z.string()
+        description: z.string(),
+        category: z.string(),
+        tags: z.array(z.string()).default([]),
+        draft: z.boolean().default(false)
       })
     })
   }

@@ -1,7 +1,7 @@
-export const BRANDS = ['pink', 'lime', 'midnight'] as const
+export const BRANDS = ['gold', 'pink', 'midnight'] as const
 export type Brand = typeof BRANDS[number]
 
-const DEFAULT_BRAND: Brand = 'pink'
+const DEFAULT_BRAND: Brand = 'gold'
 
 export function useBrand() {
     const brand = useState<Brand>('brand', () => DEFAULT_BRAND)
