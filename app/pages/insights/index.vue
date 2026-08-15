@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: posts } = await useAsyncData('insights-list', () =>
-  queryCollection('insights').all()
+  queryCollection('insights').where('draft', '<>', true).all()
 )
 </script>
 
