@@ -7,7 +7,7 @@ defineProps<{
 
 <template>
     <svg
-        class="absolute fill-brand animate-[spin_18s_linear_infinite] [--transform-rotate:-360deg]"
+        class="absolute fill-brand animate-[spin_18s_linear_infinite_reverse]"
         :style="{ inset: `${-inset}px` }"
         :width="size"
         :height="size"
