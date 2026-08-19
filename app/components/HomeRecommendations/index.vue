@@ -11,10 +11,22 @@ interface Recommendation {
 
 const recommendations: Recommendation[] = [
     {
+        content: 'Brendan doesn\'t limit his focus to the immediate task at hand. He consistently looks beyond it, considering broader UI/UX and design principles the team should follow, as well as patterns in how the team works and opportunities to improve our effectiveness. He is generous with his time and expertise, helping the team build a better product while continuously raising the bar for how we work together.',
+        author: 'Dennis Mnuskin',
+        role: 'Director of Engineering, Argos99',
+        span: true
+    },
+    {
         content: 'Brendan is extremely passionate about his work, creating/delivering great products, and has great insights. His experience in design thinking and elements, coding, and understanding business value delivery makes him a huge asset to any team.',
         author: 'Alex Courtney',
         role: 'Director of Innovation R&D, Mercy',
         social: 'https://www.linkedin.com/in/alexander-courtney-stl/'
+    },
+    {
+        content: 'Brendan has an infectious attitude that leaves you feeling excited to execute on the designs and concepts that he creates. He has also been a great mentor to the design team and has helped to bring them up to speed quickly.',
+        author: 'Nicholas Kajok',
+        role: 'Staff Engineer, Coolfire Solutions',
+        social: 'https://www.linkedin.com/in/nkajok/'
     },
     {
         content: 'Working with Brendan in Mercy Virtual\'s R&D group was a pleasure. His programming skills were top notch and his personality, drive, and ability to understand the mission was unparalleled. Brendan\'s eye for design and desire to build usable, yet beautiful interfaces really stood out while we worked together. He was always eager to teach and learn and his leadership kept us on track in our agile environment. Great guy, great developer, great designer, and a pleasure to work with.',
@@ -42,16 +54,11 @@ const recommendations: Recommendation[] = [
         role: 'Developer, Mercy Virtual'
     },
     {
-        content: 'Brendan has an infectious attitude that leaves you feeling excited to execute on the designs and concepts that he creates. He has also been a great mentor to the design team and has helped to bring them up to speed quickly.',
-        author: 'Nicholas Kajok',
-        role: 'Staff Engineer, Coolfire Solutions',
-        social: 'https://www.linkedin.com/in/nkajok/'
-    },
-    {
         content: 'His designs clearly articulate the value a user will get out of each interaction with the page. Working with Brendan was a treat. In three days of pairing, we were able to redesign the entire application and put forward a working prototype.',
         author: 'Johnny Steenbergen',
         role: 'Developer, Asynchrony Labs',
-        social: 'https://www.linkedin.com/in/jwsteenbergen/'
+        social: 'https://www.linkedin.com/in/jwsteenbergen/',
+        span: true
     }
 ]
 </script>
