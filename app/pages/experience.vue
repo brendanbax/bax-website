@@ -9,6 +9,7 @@ interface ExperienceEntry {
     company: string
     dates: string
     bullets: string[]
+    highlight?: string
 }
 
 const experience: ExperienceEntry[] = [
@@ -17,6 +18,7 @@ const experience: ExperienceEntry[] = [
         role: 'Senior UX Engineer / Full-Stack Developer',
         company: 'Fenix 24',
         dates: 'March 2025 – Present',
+        highlight: 'Good Samaritan Award recipient, April 2026',
         bullets: [
             'Design and build scalable, reliable applications, from Figma prototype through production deployment.',
             'Shipped LLM-powered search, custom reporting, and assessment dashboards used by hundreds of users across a global workforce.',
@@ -62,6 +64,7 @@ const experience: ExperienceEntry[] = [
         role: 'Senior Software Design Engineer',
         company: 'Mercy',
         dates: '2019 – 2020',
+        highlight: 'Shipped Mercy\'s telehealth platform in weeks following the COVID-19 pandemic',
         bullets: [
             'Designed and engineered healthcare R&D initiatives, working directly with clinicians.',
             'Built a video chat platform for virtual patient visits, expanding access to care.',
@@ -104,7 +107,8 @@ const experience: ExperienceEntry[] = [
         dates: '2013 – 2015',
         bullets: [
             'Redesigned the product customization interface for a custom controller e-commerce business.',
-            'Replaced product photography with 3D renders, cutting production time and cost.',
+            'Replaced legacy product photography with 3D renders, reducing time-to-market for new products.',
+            'Brand manager and art director for web and print media including marketing, packaging, and product guides.'
         ],
     },
     {
@@ -181,6 +185,10 @@ onMounted(() => {
                     <ThemeCard class="mb-8 flex-1">
                         <ProseOverline>{{ job.company }} · {{ job.dates }}</ProseOverline>
                         <ProseH3>{{ job.role }}</ProseH3>
+                        <div v-if="job.highlight" class="px-2 py-1 mb-2 flex items-start gap-x-2 rounded bg-base-200/50 dark:bg-base-900 text-base-600 dark:text-base-400 max-w-fit">
+                            <IconStar class="size-5 text-brand" />
+                            <span>{{ job.highlight }}</span>
+                        </div>
                         <ProseUl>
                             <ProseLi v-for="bullet in job.bullets" :key="bullet">{{ bullet }}</ProseLi>
                         </ProseUl>
@@ -188,7 +196,21 @@ onMounted(() => {
                 </li>
             </ul>
         </section>
-        <section class="border-t border-base-200 dark:border-base-800">
+        <section class="bg-brand py-8 sm:py-12 padded">
+            <div class="flex flex-col md:flex-row-reverse gap-12 md:gap-0 items-center justify-between grow py-16 mx-auto max-w-screen-xl">
+                <h1 class="font-bebas text-base-950 text-5xl sm:text-6xl lg:text-7xl text-center">Volunteering</h1>
+                <div>
+                    <ProseH3 class="text-base-950">Waypoint Church</ProseH3>
+                    <h4 class="text-lg sm:text-xl font-[700] mb-2 text-base-950">Member since 2019</h4>
+                    <ProseUl class="text-base-950">
+                        <ProseLi>Elected Deacon, October 2025</ProseLi>
+                        <ProseLi>Weekly kids ministry large group leader and presenter</ProseLi>
+                        <ProseLi>Summer VBS Master of Ceremonies and large group leader, 2025 and 2026</ProseLi>
+                    </ProseUl>
+                </div>
+            </div>
+        </section>
+        <section>
             <PageHero>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center justify-between grow py-16 mx-auto max-w-screen-xl">
                     <HeroTitle title="Education" />
