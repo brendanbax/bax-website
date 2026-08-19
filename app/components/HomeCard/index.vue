@@ -34,7 +34,7 @@ onMounted(() => {
         class="@container group !p-0 overflow-hidden"
         :class="isVisible ? 'top-in' : 'opacity-0'"
     >
-        <div class="flex flex-col lg:group-even:flex-col-reverse @2xl:flex-row @2xl:group-even:flex-row-reverse">
+        <div class="h-full flex flex-col lg:group-even:flex-col-reverse @2xl:flex-row @2xl:group-even:flex-row-reverse">
             <div class="relative bg-gradient-to-br from-brand-400 to-brand-600 grow flex items-center justify-center p-12">
                 <IconHalftone
                     class="absolute inset-0 w-full aspect-square dark:text-black/50 text-white/50 mix-blend-overlay pointer-events-none"
