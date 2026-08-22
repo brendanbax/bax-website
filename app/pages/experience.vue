@@ -21,9 +21,10 @@ const experience: ExperienceEntry[] = [
         highlight: 'Good Samaritan Award recipient, April 2026',
         bullets: [
             'Design and build scalable, reliable applications, from Figma prototype through production deployment.',
-            'Shipped LLM-powered search, custom reporting, and assessment dashboards used by hundreds of users across a global workforce.',
+            'Deliver product presentations across every level of the business — bi-weekly stakeholder showcases, company-wide stage/video briefings, and live customer demos for prospective clients.',
             'Design system author, test-driven development champion, raising code quality and aligning product vision to pixels.',
             'Serve as the team\'s voice for user-centered design, mentoring peers on research and usability best practices.',
+            'Shipped LLM-powered search, custom reporting, and assessment dashboards used by hundreds of users across a global workforce.',
         ],
     },
     {
